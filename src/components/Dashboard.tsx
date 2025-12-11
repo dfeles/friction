@@ -215,7 +215,7 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
                 ref={textareaRef}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Product you want to avoid buying..."
+                placeholder="Product you want to buy..."
                 className="w-full bg-transparent text-slate-950 placeholder-slate-400 resize-none focus:outline-none text-base leading-tight"
               />
             </div>
