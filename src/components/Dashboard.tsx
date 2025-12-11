@@ -239,7 +239,7 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
 
                 {/* Dropdown Menu */}
                 {showBossModeDropdown && (
-                  <div className="absolute bottom-full left-0 mb-2 bg-white border border-slate-200 rounded-lg shadow-lg z-50 w-[320px]">
+                  <div className="absolute top-full left-0 mt-2 bg-white border border-slate-200 rounded-lg shadow-lg z-50 w-[320px]">
                     {intensityLevels.map((level) => {
                       const LevelIcon = level.icon;
                       return (
