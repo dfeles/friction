@@ -356,9 +356,123 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
           <>
             {/* Section 1: Can you reason for it? */}
             <div className="space-y-2">
-              <div className="p-12 text-center">
-                <h2 className="text-4xl font-bold mb-4 text-slate-200">{landingSections[0].title}</h2>
-                <p className="text-2xl text-slate-400">{landingSections[0].description}</p>
+              <div className="p-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  {/* Left Side - Apple Watch Card */}
+                  <div className="p-8 rounded-2xl flex flex-col items-center justify-center">
+                    <div className="relative mb-4">
+                      <img
+                        src={cancelledPurchases[0].image}
+                        alt={cancelledPurchases[0].name}
+                        className="w-48 h-48 object-cover rounded-lg"
+                      />
+                      <div className="absolute -top-2 -right-2 bg-slate-50 text-red-500 text-xs px-2 py-1 rounded">
+                        {cancelledPurchases[0].reason}
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-lg font-medium mb-1">{cancelledPurchases[0].name}</div>
+                      <div className="text-sm text-slate-400">{cancelledPurchases[0].price}</div>
+                    </div>
+                  </div>
+
+                  {/* Right Side - Text Content */}
+                  <div className="text-center md:text-left">
+                    <h2 className="text-4xl font-bold mb-6 text-slate-200">{landingSections[0].title}</h2>
+                    {/* Message Bubble */}
+                    <div className="flex justify-start">
+                      <div className="max-w-[85%] px-4 py-3 bg-slate-900 text-slate-300 rounded-lg">
+                        <p className="text-sm whitespace-pre-wrap">
+                          Your phone already tells time, tracks fitness, and sends notifications—why strap another screen to your wrist that you'll charge every night and upgrade in two years?{'\n\n'}Do you really need the {cancelledPurchases[0].name}?
+                        </p>
+                        <p className="text-xs text-slate-500 mt-2">
+                          {new Date().toLocaleTimeString()}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Section 1.5: Chrome Extension */}
+            <div className="space-y-2">
+              <div className="p-12">
+                <div className="max-w-2xl mx-auto">
+                  <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8">
+                    <h3 className="text-2xl font-bold mb-4 text-slate-200 text-center">
+                      A Chrome extension that pops up when you're filling credit card details
+                    </h3>
+                    <p className="text-lg text-slate-400 mb-6 text-center">
+                      Right at the moment of purchase, Friction challenges your decision
+                    </p>
+                    
+                    {/* Credit Card Form Illustration */}
+                    <div className="relative bg-slate-800 rounded-xl p-6 border border-slate-700">
+                      {/* Rotated Popup Message */}
+                      <div className="absolute bottom-4 right-4 z-10 transform rotate-[-8deg]">
+                        <div className="bg-white text-slate-900 px-4 py-3 rounded-lg shadow-lg">
+                          <p className="text-sm font-medium whitespace-nowrap">Can you reason for it?</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4 pointer-events-none opacity-50">
+                        <div>
+                          <label className="block text-xs font-medium text-slate-400 mb-1">
+                            Card Number
+                          </label>
+                          <input
+                            type="text"
+                            value="4242 4242 4242 4242"
+                            disabled
+                            className="w-full px-3 py-2 border border-slate-600 rounded-md text-slate-400 text-sm bg-slate-900 cursor-not-allowed"
+                          />
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-xs font-medium text-slate-400 mb-1">
+                              Expiry Date
+                            </label>
+                            <input
+                              type="text"
+                              value="12/25"
+                              disabled
+                              className="w-full px-3 py-2 border border-slate-600 rounded-md text-slate-400 text-sm bg-slate-900 cursor-not-allowed"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs font-medium text-slate-400 mb-1">
+                              CVV
+                            </label>
+                            <input
+                              type="text"
+                              value="123"
+                              disabled
+                              className="w-full px-3 py-2 border border-slate-600 rounded-md text-slate-400 text-sm bg-slate-900 cursor-not-allowed"
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <label className="block text-xs font-medium text-slate-400 mb-1">
+                            Cardholder Name
+                          </label>
+                          <input
+                            type="text"
+                            value="John Doe"
+                            disabled
+                            className="w-full px-3 py-2 border border-slate-600 rounded-md text-slate-400 text-sm bg-slate-900 cursor-not-allowed"
+                          />
+                        </div>
+                        <button 
+                          disabled
+                          className="w-full py-3 bg-slate-700 text-slate-500 text-sm font-medium rounded-md cursor-not-allowed"
+                        >
+                          Complete Purchase
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
