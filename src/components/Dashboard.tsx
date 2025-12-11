@@ -197,7 +197,7 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
             alt="Friction" 
             className="w-24 h-24 object-contain"
           />
-          <div className="text-2xl font-medium text-slate-50">Friction</div>
+          <div className="text-2xl font-medium text-slate-50">friction</div>
           <div className="text-base text-slate-400 text-center">
             Introducing friction, for your next purchase. Talk through your decisions with voice.
           </div>
