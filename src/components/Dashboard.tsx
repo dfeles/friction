@@ -399,7 +399,7 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
             <div className="space-y-2">
               <div className="p-12">
                 <div className="max-w-2xl mx-auto">
-                  <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8">
+                  <div className="rounded-2xl p-8">
                     <h3 className="text-2xl font-bold mb-4 text-slate-200 text-center">
                       A Chrome extension that pops up when you're filling credit card details
                     </h3>
