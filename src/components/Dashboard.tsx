@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Feather, MessageCircle, UserX, Flame, Sword, X } from 'lucide-react';
+import { useUser } from '../contexts/UserContext';
 
 interface CancelledPurchase {
   id: number;
@@ -15,7 +16,7 @@ interface DashboardProps {
 }
 
 const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const { isSignedIn, setIsSignedIn } = useUser();
   const [showSignInPopup, setShowSignInPopup] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showBossModeDropdown, setShowBossModeDropdown] = useState(false);
