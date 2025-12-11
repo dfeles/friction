@@ -148,10 +148,6 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
       title: 'Choose your fighter',
       description: 'Pick your intensity level and talk through your purchase decision with voice.',
     },
-    {
-      title: 'See what you\'ve saved',
-      description: 'Track every purchase you avoided through voice conversations. Watch the numbers grow. Feel the satisfaction.',
-    },
   ];
 
   return (
@@ -396,16 +392,39 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
               </div>
             </div>
 
-            {/* Section 1.5: Chrome Extension */}
+            {/* Section 2: Choose your fighter - with intensity levels */}
+            <div className="space-y-2">
+              <div className="p-12">
+                <h2 className="text-2xl font-bold mb-4 text-slate-200 text-center">{landingSections[1].title}</h2>
+                <p className="text-lg text-slate-400 mb-8 text-center">{landingSections[1].description}</p>
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                  {intensityLevels.map((level) => {
+                    const LevelIcon = level.icon;
+                    return (
+                      <div
+                        key={level.value}
+                        className="p-6 rounded-xl flex flex-col items-center text-center border border-slate-800 hover:border-slate-700 transition-colors"
+                      >
+                        <LevelIcon className="w-8 h-8 text-slate-500 mb-3" />
+                        <div className="text-sm font-medium text-slate-300 mb-1">{level.value}</div>
+                        <div className="text-xs text-slate-500">{level.description}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Section 3: One more thing: Chrome Extension */}
             <div className="space-y-2">
               <div className="p-12">
                 <div className="max-w-2xl mx-auto">
                   <div className="rounded-2xl p-8">
                     <h3 className="text-2xl font-bold mb-4 text-slate-200 text-center">
-                      A Chrome extension that pops up when you're filling credit card details
+                      One more thing: Chrome extension
                     </h3>
                     <p className="text-lg text-slate-400 mb-6 text-center">
-                      Right at the moment of purchase, talk through your decision with voice. Friction listens and challenges your reasoning.
+                      A Chrome extension that pops up when you're filling credit card details. Right at the moment of purchase, talk through your decision with voice. Friction listens and challenges your reasoning.
                     </p>
                     
                     {/* Credit Card Form Illustration */}
@@ -477,36 +496,6 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
               </div>
             </div>
 
-            {/* Section 2: Choose your fighter - with intensity levels */}
-            <div className="space-y-2">
-              <div className="p-12">
-                <h2 className="text-2xl font-bold mb-4 text-slate-200 text-center">{landingSections[1].title}</h2>
-                <p className="text-lg text-slate-400 mb-8 text-center">{landingSections[1].description}</p>
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-                  {intensityLevels.map((level) => {
-                    const LevelIcon = level.icon;
-                    return (
-                      <div
-                        key={level.value}
-                        className="p-6 rounded-xl flex flex-col items-center text-center border border-slate-800 hover:border-slate-700 transition-colors"
-                      >
-                        <LevelIcon className="w-8 h-8 text-slate-500 mb-3" />
-                        <div className="text-sm font-medium text-slate-300 mb-1">{level.value}</div>
-                        <div className="text-xs text-slate-500">{level.description}</div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-
-            {/* Section 3: See what you've saved */}
-            <div className="space-y-2">
-              <div className="p-12 text-center">
-                <h2 className="text-2xl font-bold mb-4 text-slate-200">{landingSections[2].title}</h2>
-                <p className="text-lg text-slate-400">{landingSections[2].description}</p>
-              </div>
-            </div>
           </>
         )}
       </div>
