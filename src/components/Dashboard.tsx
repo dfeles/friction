@@ -145,11 +145,11 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
     },
     {
       title: 'Choose your fighter',
-      description: 'Pick your intensity level and let Friction challenge your purchase decision.',
+      description: 'Pick your intensity level and talk through your purchase decision with voice.',
     },
     {
       title: 'See what you\'ve saved',
-      description: 'Track every purchase you avoided. Watch the numbers grow. Feel the satisfaction.',
+      description: 'Track every purchase you avoided through voice conversations. Watch the numbers grow. Feel the satisfaction.',
     },
   ];
 
@@ -202,7 +202,7 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
           />
           <div className="text-2xl font-medium text-slate-50">Friction</div>
           <div className="text-base text-slate-400 text-center">
-            Introducing friction, for your next purchase
+            Introducing friction, for your next purchase. Talk through your decisions with voice.
           </div>
         </div>
 
@@ -378,12 +378,12 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
 
                   {/* Right Side - Text Content */}
                   <div className="text-center md:text-left">
-                    <h2 className="text-4xl font-bold mb-6 text-slate-200">{landingSections[0].title}</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-slate-200">{landingSections[0].title}</h2>
                     {/* Message Bubble */}
                     <div className="flex justify-start">
                       <div className="max-w-[85%] px-4 py-3 bg-slate-900 text-slate-300 rounded-lg">
                         <p className="text-sm whitespace-pre-wrap">
-                          Your phone already tells time, tracks fitness, and sends notifications—why strap another screen to your wrist that you'll charge every night and upgrade in two years?{'\n\n'}Do you really need the {cancelledPurchases[0].name}?
+                          Your phone already tells time, tracks fitness, and sends notifications—why strap another screen to your wrist that you'll charge every night and upgrade in two years?{'\n\n'}Do you really need the {cancelledPurchases[0].name}? Talk through your reasoning with voice.
                         </p>
                         <p className="text-xs text-slate-500 mt-2">
                           {new Date().toLocaleTimeString()}
@@ -404,7 +404,7 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
                       A Chrome extension that pops up when you're filling credit card details
                     </h3>
                     <p className="text-lg text-slate-400 mb-6 text-center">
-                      Right at the moment of purchase, Friction challenges your decision
+                      Right at the moment of purchase, talk through your decision with voice. Friction listens and challenges your reasoning.
                     </p>
                     
                     {/* Credit Card Form Illustration */}
@@ -479,7 +479,7 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
             {/* Section 2: Choose your fighter - with intensity levels */}
             <div className="space-y-2">
               <div className="p-12">
-                <h2 className="text-4xl font-bold mb-6 text-slate-200 text-center">{landingSections[1].title}</h2>
+                <h2 className="text-2xl font-bold mb-4 text-slate-200 text-center">{landingSections[1].title}</h2>
                 <p className="text-lg text-slate-400 mb-8 text-center">{landingSections[1].description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                   {intensityLevels.map((level) => {
@@ -502,7 +502,7 @@ const Dashboard = ({ onNavigateToConversation }: DashboardProps) => {
             {/* Section 3: See what you've saved */}
             <div className="space-y-2">
               <div className="p-12 text-center">
-                <h2 className="text-4xl font-bold mb-4 text-slate-200">{landingSections[2].title}</h2>
+                <h2 className="text-2xl font-bold mb-4 text-slate-200">{landingSections[2].title}</h2>
                 <p className="text-lg text-slate-400">{landingSections[2].description}</p>
               </div>
             </div>
